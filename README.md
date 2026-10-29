@@ -235,7 +235,9 @@ The Smart Panel does not directly control the light. Instead, it sends telemetry
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1390bd56-32ba-431b-892c-bc66b8cec42b" alt="Smart Panel Schematic" width="750">
 </p>
-
+<p align="center">
+  Please note, known issue in design is that the buck converter ramp up is too slow causing the main esp32s3 fail to boot (brownout) and will not recover unless reset. To overcome this the secondary Esp32H2 was used to reset the Esp32S3 after 5 seconds. In a future design reduce ss capacitors at the buck and minimize the output capacitors at the buck. DO NOT USE THIS SCHEMATIC, this was a learning project that tought me many lessons and many issues are probably still not found out.  
+</p>
 <p align="center">
   <em>Figure 11: Smart Panel schematic</em>
 </p>
